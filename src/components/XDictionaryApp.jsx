@@ -23,17 +23,18 @@ const XDictionaryApp = () => {
 
   return (
     <div className="XDictionaryApp">
-      <h1>XDictionary</h1>
+      <h1>Dictionary App</h1>
       <div className="search-container">
         <input
           type="text"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          placeholder="Enter search term"
+          placeholder="Search for word..."
         />
         <button onClick={handleSearch}>Search</button>
       </div>
       <div className="result">
+        <p>Definition:</p>
         {searchResult !== null && <p>{searchResult}</p>}
       </div>
     </div>
